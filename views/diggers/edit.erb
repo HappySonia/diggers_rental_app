@@ -1,0 +1,24 @@
+<form action="/update/<%= digger['id']%>" method='POST'>
+<input type="hidden" name="_method" value="patch">
+
+    <label for="">brand</label>
+    <input type="text" name="brand" value="<%= digger['brand']%>">
+
+    <label for="">model</label>
+    <input type="text" name="model" value="<%= digger['model']%>">
+
+    <label for="">img_url</label>
+    <input type="text" name="img_url" value="<%= digger['img_url']%>" alt="">
+
+    <label for="">rental startdate</label>
+    <input type="text" name="rental_startdate" value="<%= digger['rental_startdate']%>">
+
+    <label for="">rental enddate</label>
+    <input type="text" name="rental_enddate" value="<%= digger['rental_enddate']%>">
+
+    <label for="">rate</label>
+    <input type="text" name="rate" value="<%= digger['rate']%>">
+
+    <button>update</button>
+
+</form>

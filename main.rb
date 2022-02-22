@@ -3,12 +3,21 @@ require 'sinatra'
 
 require 'sinatra/reloader' if development?
 require 'pry' if development?
+require 'pg'
+require 'httparty'
+require 'bcrypt' #password_digest
 
 require_relative 'db/db'
 
-get '/' do
-  erb :index
-end
+require_relative 'controllers/diggers_controller'
+require_relative 'controllers/sessions_controller'
+require_relative 'controllers/users_controller'
+
+# enable:sessions # allow session work
+# require_relative 'sessions_helper'
+
+require_relative 'models/digger'
+require_relative 'models/user'
 
 
 

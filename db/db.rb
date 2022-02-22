@@ -1,4 +1,3 @@
-require 'pg'
 
 def run_sql(sql, sql_params = [])  
   db = PG.connect(ENV['DATABASE_URL'] || {dbname: 'diggers_rental_db'})
