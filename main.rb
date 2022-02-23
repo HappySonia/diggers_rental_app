@@ -13,8 +13,8 @@ require_relative 'controllers/diggers_controller'
 require_relative 'controllers/sessions_controller'
 require_relative 'controllers/users_controller'
 
-# enable:sessions # allow session work
-# require_relative 'sessions_helper'
+enable:sessions # allow session work
+require_relative 'helpers/sessions_helper'
 
 require_relative 'models/digger'
 require_relative 'models/user'

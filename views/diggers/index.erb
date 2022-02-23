@@ -1,26 +1,38 @@
 <h1>Welcome to diggers rental app</h1>
 
+<a href="/sign_up" >Sign up</a>
+<a href="/login" >Login</a>
 
+<% if logged_in?() %>
+    <h2>Welcome to diggers rental app <%= current_user()['first_name']%></h2>
 
-<a href="/diggers/new">Add a digger</a>
-
-<% diggers.each do |digger|%>
-
-    <h2>brand:<%= digger['brand']%></h2>
-    <h2>model:<%= digger['model']%></h2>
-    <img src="<%= digger['img_url']%>" alt="">
-    <h2>rental_startdate:<%= digger['rental_startdate']%></h2>
-    <h2>rental_enddate:<%= digger['rental_enddate']%></h2>
-    <h2>rate:<%= digger['rate']%></h2>
-
-    <a href="/diggers/edit?id=<%=digger['id']%>">Edit</a>
-
-    <form action="/delete?id=<%=digger['id']%>" method="POST">
-        <input type="hidden" method="_delete" value="delete">
-        <button>Delete</button>
+    <form action="/sessions" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <button>Logout</button>
     </form>
 
+    <a href="/diggers/new">Add a digger</a>
+
+    <% diggers.each do |digger|%>
+
+        <h2>brand:<%= digger['brand']%></h2>
+        <h2>model:<%= digger['model']%></h2>
+        <img src="<%= digger['img_url']%>" alt="">
+        <h2>rental_startdate:<%= digger['rental_startdate']%></h2>
+        <h2>rental_enddate:<%= digger['rental_enddate']%></h2>
+        <h2>rate:<%= digger['rate']%></h2>
+
+        <a href="/diggers/edit?id=<%=digger['id']%>">Edit</a>
+
+        <form action="/delete?id=<%=digger['id']%>" method="POST">
+            <input type="hidden" method="_delete" value="delete">
+            <button>Delete</button>
+        </form>
+
+    <% end %>
 <% end %>
+
+
 
 
 
