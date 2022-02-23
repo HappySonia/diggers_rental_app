@@ -12,6 +12,8 @@ require_relative 'db/db'
 require_relative 'controllers/diggers_controller'
 require_relative 'controllers/sessions_controller'
 require_relative 'controllers/users_controller'
+require_relative 'controllers/weather_controller'
+
 
 enable:sessions # allow session work
 require_relative 'helpers/sessions_helper'

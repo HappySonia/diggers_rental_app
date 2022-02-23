@@ -1,10 +1,14 @@
-<h1>Welcome to diggers rental app</h1>
+<h1>Welcome to Diggers Rental App</h1>
 
-<a href="/sign_up" >Sign up</a>
-<a href="/login" >Login</a>
+<nav class='nav'>
+    <a href="/sign_up" >Sign up</a>
+    <a href="/login" >Login</a>
+
+    <a href="/weather/details">Check Weather</a>
+</nav>
 
 <% if logged_in?() %>
-    <h2>Welcome to diggers rental app <%= current_user()['first_name']%></h2>
+    <h2>Welcome to Diggers Rental App <span class="current_user"><%= current_user()['first_name']%></span></h2>
 
     <form action="/sessions" method="POST">
         <input type="hidden" name="_method" value="delete">

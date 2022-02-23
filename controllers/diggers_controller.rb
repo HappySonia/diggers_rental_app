@@ -3,9 +3,8 @@ get '/' do
     erb :'diggers/index',locals:{
         diggers:diggers
     }
-  end
-  
-  
+end
+    
 get '/diggers/new' do    
     erb :'diggers/new'
 end
