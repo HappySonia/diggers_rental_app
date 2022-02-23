@@ -1,22 +1,35 @@
-<h2>Please see the next 7 days weather forecast on <%= city %>:</h2>
+<h2>Please see the next 7 days Weather Forecast in <%= city %>:</h2>
 
-<h3>Day1:</h3>
+<% days=[Date.today,Date.today+1,Date.today+2,Date.today+3,Date.today+4,Date.today+5,Date.today+6] %>
+<% dates = [] %>
+<% days.each do |date| %>
+    <% date = date.day.to_s + "/" + date.month.to_s + "/" + date.year.to_s %>
+    <% dates.push(date) %>
+<% end %>
+
+<h3><%= dates[0] %></h3>
+<img src="https://openweathermap.org/img/w/<%= icon %>.png" alt="">
 <h3>Description:<%= description %></h3>
 <h3>Temp:<%= temp %></h3>
 <h3>Humidity:<%= humidity %></h3>
 <h3>Wind_speed:<%= wind_speed %></h3>
 
-<h3>Day2:</h3>
+<h3><%= dates[1] %></h3>
+<img src="https://openweathermap.org/img/w/<%= icon2 %>.png" alt="">
 <h3>Description:<%= description2 %></h3>
 <h3>Temp:<%= temp2 %></h3>
 <h3>Humidity:<%= humidity2 %></h3>
 <h3>Wind_speed:<%= wind_speed2 %></h3>
 
-<h3>Day3:</h3>
+<h3><%= dates[2] %></h3>
+<img src="https://openweathermap.org/img/w/<%= icon3 %>.png" alt="">
 <h3>Description:<%= description3 %></h3>
 <h3>Temp:<%= temp3 %></h3>
 <h3>Humidity:<%= humidity3 %></h3>
 <h3>Wind_speed:<%= wind_speed3 %></h3>
+
+
+
 
 
 

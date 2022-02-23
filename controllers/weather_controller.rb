@@ -18,17 +18,20 @@ get '/weather/result' do
     result =  HTTParty.get(url_weather).parsed_response
     
     erb :'weather/result', locals: {
-    city:result['timezone'],            
+    city:result['timezone'],  
+    icon:result['daily'][0]['weather'][0]['icon'],          
     temp:result['daily'][0]['temp']['day'],
     humidity:result['daily'][0]['humidity'],
     wind_speed:result['daily'][0]['wind_speed'],
     description:result['daily'][0]['weather'][0]['description'],
 
+    icon2:result['daily'][1]['weather'][0]['icon'], 
     temp2:result['daily'][1]['temp']['day'],    
     humidity2:result['daily'][1]['humidity'],
     wind_speed2:result['daily'][1]['wind_speed'],
     description2:result['daily'][1]['weather'][0]['description'],
 
+    icon3:result['daily'][2]['weather'][0]['icon'], 
     temp3:result['daily'][2]['temp']['day'],    
     humidity3:result['daily'][2]['humidity'],
     wind_speed3:result['daily'][2]['wind_speed'],
