@@ -1,4 +1,5 @@
-<form action="/update/<%= digger['id']%>" method='POST'>
+<div class="edit_container">
+    <form action="/update/<%= digger['id']%>" method='POST'>
 <input type="hidden" name="_method" value="patch">
 
     <label for="">brand</label>
@@ -22,3 +23,4 @@
     <button>update</button>
 
 </form>
+</div>
