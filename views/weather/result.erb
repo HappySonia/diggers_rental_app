@@ -1,17 +1,23 @@
-<h2>Please see the next 7 days Weather Forecast in <%= city %>:</h2>
+<header class="weather_header">Next 7 days Weather Forecast in <%= city %>:</header>
 
+<div class="forecast">
 <% results.each do |result| %>
-<% date = Time.at(result['dt']) %>
-<% date = date.day.to_s + "/" + date.month.to_s + "/" + date.year.to_s %>
+<div class='daily_forecast'>
+    <% date = Time.at(result['dt']) %>
+    <% date = date.day.to_s + "/" + date.month.to_s + "/" + date.year.to_s %>
 
-<img src="https://openweathermap.org/img/w/<%= result['weather'][0]['icon'] %>.png" alt="">
-<h3>Date:<%= date %></h3>
-<h3>Description:<%= result['weather'][0]['description'] %></h3>
-<h3>Temp:<%= result['temp']['day'] %></h3>
-<h3>Humidity:<%= result['humidity'] %></h3>
-<h3>Wind_speed:<%= result['wind_speed'] %></h3>
+    <img src="https://openweathermap.org/img/w/<%= result['weather'][0]['icon'] %>.png" alt="">
+    <p><%= date %></p>
+    <p><%= result['weather'][0]['description'] %></p>
+    <p>temp:<%= result['temp']['day'] %></p>
+    <p>humidity:<%= result['humidity'] %></p>
+    <p>wind_speed:<%= result['wind_speed'] %></p>
+    <a href="#">more info</a>
+</div>
 
 <% end %>
+</div>
+<div class="return"><a href="/">return to homepage</a></div>
 
   
 

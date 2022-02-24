@@ -1,33 +1,138 @@
 body {
     margin: 0 auto;
     background-color: #ccc;
-    border: 1px solid black;
+    font-family: open sans-serif;
 }
 
-h1 {
+.homepage_container {
+    width: 800px;
+    height: 1000px;
+    background-image: url(https://images.unsplash.com/photo-1533196230525-443832f7786b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGRpZ2dlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.homepage_header,
+.mainpage_header {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 50px;
+    font-size: 2em;
 }
 
 .nav {
     display: flex;
-    gap: 10%;
+    justify-content: center;
+    gap: 5%;
+    font-size: 1.5em;
 }
 
-.users {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    font-size: larger;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid black;
-    padding: 5px 10px;
-    margin: 0 auto;
+.users,
+.signup_form,
+.weather_form,
+.main_page {
+    width: 50%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.users input,
+.signup_form input,
+.weather_form input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.sign_up,
+.login,
+.weather_form button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add_button,
+.logout,
+.edit,
+.delete {
+    width: 100px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: red;
+}
+
+.sign_up:hover {
+    background-color: #45a049;
 }
 
 .current_user {
     color: blue;
 }
 
-button {
-    font-size: larger;
+.weather_header {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: medium;
+    gap: 20px;
+}
+
+.daily_forecast {
+    background-color: seagreen;
+    text-align: center;
+    padding: 5px;
+}
+
+.return {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.product_container {
+    border: 1px solid red;
+}
+
+.product_container img {
+    float: left;
+}
+
+.product_container .description {
+    display: inline;
+    font-size: 1.1 em;
+    font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,39 +1,49 @@
-<h1>Welcome to Diggers Rental App</h1>
-
-<nav class='nav'>
-    <a href="/sign_up" >Sign up</a>
-    <a href="/login" >Login</a>
-    <a href="/weather/details">Check Weather</a>
-</nav>
-
+<div class="main_page">
 <% if logged_in?() %>
-    <h2>Welcome to Diggers Rental App <span class="current_user"><%= current_user()['first_name']%></span></h2>
+    <h2 class="mainpage_header">Welcome to Diggers Rental App <span class="current_user"><%= current_user()['first_name']%></span></h2>
 
     <form action="/sessions" method="POST">
         <input type="hidden" name="_method" value="delete">
-        <button>Logout</button>
+        <button class="logout">Logout</button>
     </form>
 
-    <a href="/diggers/new">Add a digger</a>
+    <div class="add_button"><a href="/diggers/new">Add a digger</a></div>
 
     <% diggers.each do |digger|%>
 
-        <h2>brand:<%= digger['brand']%></h2>
-        <h2>model:<%= digger['model']%></h2>
+        <div class="product_container">
         <img src="<%= digger['img_url']%>" alt="">
-        <h2>rental_startdate:<%= digger['rental_startdate']%></h2>
-        <h2>rental_enddate:<%= digger['rental_enddate']%></h2>
-        <h2>rate:<%= digger['rate']%></h2>
+        <div class='description'>
+            <p>brand:<%= digger['brand']%></p>
+            <p>model:<%= digger['model']%></p>
+            
+            <p>rental_startdate:<%= digger['rental_startdate']%></p>
+            <p>rental_enddate:<%= digger['rental_enddate']%></p>
+            <p>rate:<%= digger['rate']%></p>
 
-        <a href="/diggers/edit?id=<%=digger['id']%>">Edit</a>
-
+            <div class="edit"><a href="/diggers/edit?id=<%=digger['id']%>">Edit</a></div>
+        
         <form action="/delete?id=<%=digger['id']%>" method="POST">
             <input type="hidden" method="_delete" value="delete">
-            <button>Delete</button>
+            <button class="delete">Delete</button>
         </form>
+        </div>
+
+        
+        </div>
 
     <% end %>
+    <% else %>
+        <div class="homepage_container">
+            <h1 class="homepage_header">Welcome to Diggers Rental App</h1>
+            <nav class='nav'>
+                <a href="/sign_up" >Sign up</a>
+                <a href="/login" >Login</a>
+                <a href="/weather/details">Check Weather</a>
+            </nav>
+        </div>
 <% end %>
+</div>
 
 
 
