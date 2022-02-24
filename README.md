@@ -6,6 +6,7 @@ This project allows users to check weather that links weather information from o
 add app functions and api work. 
 
 ## Cool tech that I used
+Have complete RESTful routes
 Sessions for logged_in and BCrypt for password_digest. 
 nested  API.
 
