@@ -7,7 +7,7 @@
             <input type="hidden" name="_method" value="delete">
             <button class="logout">Logout</button>
         </form>
-
+        <div class="order_confirmation"></div>
         <div class="add_button">
             <a href="/diggers/new">Add a digger</a>
         </div>
@@ -15,7 +15,8 @@
         <% diggers.each do |digger|%>
 
             <div class="product_container">
-            <div class=".img"><img src="<%= digger['img_url']%>" alt=""></div>
+    
+            <img class="product_image" src="<%= digger['img_url']%>" alt="">
             <div class='description'>
                 <p>brand:<%= digger['brand']%></p>
                 <p>model:<%= digger['model']%></p>
