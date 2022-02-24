@@ -1,5 +1,5 @@
 rental app: 
-app functions :  allow users to add ,edit and delete diggers;
+app functions :  allow users to add ,edit and delete diggers and submit order;
 api:  weather api , allow users to know the weatch then he can arrange jobs better. 
 
 
