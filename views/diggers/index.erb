@@ -15,7 +15,7 @@
         <% diggers.each do |digger|%>
 
             <div class="product_container">
-            <div><img src="<%= digger['img_url']%>" alt=""></div>
+            <div class=".img"><img src="<%= digger['img_url']%>" alt=""></div>
             <div class='description'>
                 <p>brand:<%= digger['brand']%></p>
                 <p>model:<%= digger['model']%></p>
@@ -34,7 +34,7 @@
             </div>
             
         <% end %>
-        <div class="order_button"><a href="#">Submit the order</a></div>
+        <div class="order_button"><a href="#">Submit Order</a></div>
         <% else %>
             <div class="homepage_container">
                 <h1 class="homepage_header">Welcome to Diggers Rental App</h1>
