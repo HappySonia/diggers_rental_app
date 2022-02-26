@@ -11,7 +11,7 @@ Have complete RESTful routes
 Sessions for logged_in and BCrypt for password_digest. 
 nested  API.
 
-## Lessons you learned
+## Lessons I learned
 after store apikey in zshrc, we need to close and restart terminal totally ,not only exit by control+C.
 
 ## Features to add in the future
