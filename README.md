@@ -1,18 +1,32 @@
 # diggers_rental_app
-https://thawing-anchorage-89240.herokuapp.com/
+## About 
+This is a full-stack database backed Sinatra application, where users 
+ can add diggers,edit diggers,delete diggers then submit rental order.and users also can check weather before they submit a order. 
 
-This project allows users to check weather that links weather information from openweather API.and also allows users to add diggers,edit diggers,delete diggers then submit rental order. 
+## Demonstration
+<a href="https://thawing-anchorage-89240.herokuapp.com/">Link to website</a>
 
 ## My plan/approach
 add app functions and api work. 
 
-## Cool tech that I used
-Have complete RESTful routes
-Sessions for logged_in and BCrypt for password_digest. 
-nested  API.
+## Technologies used
+<ul>
+    <li>Sinatra</li>
+    <li>Ruby</li>
+    <li>SQL</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>GitHub</li>
+    <li>Heroku</li>
+</ul>
 
 ## Lessons I learned
-after store apikey in zshrc, we need to close and restart terminal totally ,not only exit by control+C.
+<ul>
+    <li>Ruby practice</li>    
+    <li>CRUD app best practices</li>
+    <li>Heroku hosting</li>
+</ul>
 
 ## Features to add in the future
 change the user's input to users' choice. 
