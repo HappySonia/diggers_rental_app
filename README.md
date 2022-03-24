@@ -4,7 +4,7 @@ This is a full-stack database backed Sinatra application, where users
  can add diggers,edit diggers,delete diggers then submit rental order.and users also can check weather before they submit a order. 
 
 ## Demonstration
-<a href="https://thawing-anchorage-89240.herokuapp.com/">Link to website</a>
+<a href="http://diggers-rental.herokuapp.com/">Link to website</a>
 
 ## My plan/approach
 add app functions and api work. 
