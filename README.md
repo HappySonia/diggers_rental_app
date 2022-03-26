@@ -5,6 +5,8 @@ This is a full-stack database backed Sinatra application, where users
 
 ## Demonstration
 <a href="http://diggers-rental.herokuapp.com/">Link to website</a>
+<img width="500px" src="./demo/homepage.png">
+<img width="500px" src="./demo/details.png">
 
 ## My plan/approach
 add app functions and api work. 
